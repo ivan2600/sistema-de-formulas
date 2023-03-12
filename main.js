@@ -78,20 +78,38 @@ const DepositoMP = new Deposito({
   despachos: [D0001, D0002, D0003],
 });
 
+class Producto {
+  constructor({
+    codigo,
+    kilaje,
+  }) {
+    this.codigo = codigo;
+    this.kilaje = kilaje;
+  }
+}
+
+const REB1031 = new Producto({
+  codigo: 'REB1031/01',
+  kilaje: 25,
+})
+
 class Formula {
   constructor({
     producto,
-    proporciones,
+    proporciones = {},
   }) {
     this.producto = producto;
     this.proporciones = proporciones;
   }
 }
 
-class Producto {
-  constructor({
-    codigo,
-  }) {
-    codigo = codigo;
+const REB1031_F1 = new Formula({
+  producto: REB1031,
+  proporciones: {
+    MA001: 10,
+    MA002: 10,
+    MA005: 5,
   }
-}
+})
+
+
