@@ -88,7 +88,7 @@ class Producto {
   }
 }
 
-const REB1031 = new Producto({
+const REB1031x25 = new Producto({
   codigo: 'REB1031/01',
   kilaje: 25,
 })
