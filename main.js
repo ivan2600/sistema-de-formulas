@@ -93,6 +93,11 @@ const REB1031x25 = new Producto({
   kilaje: 25,
 })
 
+const REB1039x25 = new Producto({
+  codigo: 'REB1039/01',
+  kilaje: 25,
+})
+
 class Formula {
   constructor({
     producto,
@@ -103,8 +108,28 @@ class Formula {
   }
 }
 
+const formulas = [];
+
+function agregarFormula(formula) {
+  const nuevaFormula = new Formula(formula);
+  formulas.push(nuevaFormula);
+}
+
+/*
+Para agregar una nueva fórmula, simplemente llamaríamos a la función agregarFormula pasando como argumento un objeto con los valores correspondientes para producto y proporciones. Por ejemplo:
+
+agregarFormula({
+  producto: REB1031x25,
+  proporciones: {
+    MA001: 10,
+    MA002: 10,
+    MA005: 5,
+  }
+});
+*/
+
 const REB1031_F1 = new Formula({
-  producto: REB1031,
+  producto: 'REB1031',
   proporciones: {
     MA001: 10,
     MA002: 10,
