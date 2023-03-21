@@ -71,6 +71,7 @@ class Deposito {
     this.nombre = nombre;
     this.despachos = despachos;
   }
+  static status = 'clean';
 }
 
 const DepositoMP = new Deposito({
